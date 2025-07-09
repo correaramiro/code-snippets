@@ -1,0 +1,61 @@
+@layer typography {
+    :root {
+        --fs-80: calc(80 / 16 * 1rem);
+        --fs-48: calc(48 / 16 * 1rem);
+        --fs-32: calc(32 / 16 * 1rem);
+        --fs-20: calc(20 / 16 * 1rem);
+        --fs-16: calc(16 / 16 * 1rem);
+        --font-size-h1: var(--fs-32);
+        --font-size-h2: var(--fs-32);
+        --font-size-h3: var(--fs-20);
+        --font-size-p: var(--fs-16);
+        --font-size-p-sm: var(--fs-16);
+
+        @media (width >= calc(700 / 16 * 1rem)){
+            --font-size-h1: var(--fs-48);
+            --font-size-h2: var(--fs-48);
+            --font-size-p: var(--fs-20);
+        }
+
+        @media (width >= calc(1100 / 16 * 1rem)){
+            --font-size-h1: var(--fs-80);
+        }
+    }
+
+    h1, h2, h3, p {
+        text-align: center;
+
+        @media (width >= calc(1100 / 16 * 1rem)){
+            text-align: left;
+        }
+    }
+
+    h1 {
+        font-size: var(--font-size-h1);
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: var(--font-size-h2);
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    h3 {
+        font-size: var(--font-size-h3);
+        font-weight: 500;
+        line-height: calc(24 / 20);
+    }
+
+    p {
+        font-size: var(--font-size-p);
+        font-weight: 300;
+        line-height: 1.5;
+
+        &.small {
+            font-size: var(--font-size-p-sm);
+        }
+    }
+
+}
